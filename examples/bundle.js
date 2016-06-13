@@ -90,7 +90,7 @@ var Popmenu = function (_React$Component) {
     value: function onClickAnywhere(e) {
       var target = e.target;
       var clickAnchor = ReactDOM.findDOMNode(this);
-      var menu = this.menu;
+      var menu = this.refs.popover.popover;
 
       if (target === menu) {
         return;
@@ -109,6 +109,7 @@ var Popmenu = function (_React$Component) {
   }, {
     key: 'registerMenu',
     value: function registerMenu(popover) {
+      if (popover === null) return;
       this.menu = popover.popover;
     }
   }, {
@@ -121,10 +122,8 @@ var Popmenu = function (_React$Component) {
 
       var open = this.state.open;
 
-      console.log(open);
-
       return React.createElement(Popover, _extends({
-        ref: this.registerMenu,
+        ref: 'popover',
         open: open
       }, props), children);
     }

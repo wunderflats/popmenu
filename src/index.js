@@ -37,7 +37,7 @@ class Popmenu extends React.Component {
   onClickAnywhere (e) {
     const target = e.target
     const clickAnchor = ReactDOM.findDOMNode(this)
-    const menu = this.menu
+    const menu = this.refs.popover.popover
 
     if (target === menu) {
       return
@@ -55,6 +55,7 @@ class Popmenu extends React.Component {
   }
 
   registerMenu (popover) {
+    if (popover === null) return
     this.menu = popover.popover
   }
 
@@ -64,7 +65,7 @@ class Popmenu extends React.Component {
 
     return (
       <Popover
-        ref={this.registerMenu}
+        ref='popover'
         open={open}
         {...props}
       >
