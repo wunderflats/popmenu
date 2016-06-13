@@ -27,7 +27,7 @@ class Menu extends React.Component {
         {...this.props}
         around={<Button>click me</Button>}
       >
-        <span>hello mr. tooltip</span>
+        <span>hello mr. popover menu</span>
       </Popmenu>
     )
   }

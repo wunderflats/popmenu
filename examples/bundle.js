@@ -219,7 +219,7 @@ var Menu = function (_React$Component2) {
         React.createElement(
           'span',
           null,
-          'hello mr. tooltip'
+          'hello mr. popover menu'
         )
       );
     }
