@@ -1,6 +1,6 @@
 {
   "name": "popmenu",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Popover menu component for React",
   "main": "dist/index.js",
   "scripts": {
