@@ -61,7 +61,6 @@ class Popmenu extends React.Component {
   render () {
     const { children, ...props } = this.props
     const { open } = this.state
-    console.log(open)
 
     return (
       <Popover
